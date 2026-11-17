@@ -1,12 +1,28 @@
 {
-  "name": "fiit-courses",
-  "version": "0.1.0",
+  "name": "fiit-root",
+  "version": "1.0.0",
   "private": true,
+  "workspaces": [
+    "FIIT-courses",
+    "FIIT-why_FIIT",
+    "FIIT-branches",
+    "FIIT-resources",
+    "FIIT-carrer_path",
+    "FIIT-placement"
+  ],
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev:courses": "npm run dev --workspace=fiit-courses",
+    "dev:why": "npm run dev --workspace=fiit-why-fiit",
+    "dev:branches": "npm run dev --workspace=fiit-branches",
+    "dev:resources": "npm run dev --workspace=fiit-resources",
+    "dev:career": "npm run dev --workspace=fiit-carrer-path",
+    "dev:placement": "npm run dev --workspace=fiit-placement",
+    "build:courses": "npm run build --workspace=fiit-courses",
+    "build:why": "npm run build --workspace=fiit-why-fiit",
+    "build:branches": "npm run build --workspace=fiit-branches",
+    "build:resources": "npm run build --workspace=fiit-resources",
+    "build:career": "npm run build --workspace=fiit-carrer-path",
+    "build:placement": "npm run build --workspace=fiit-placement"
   },
   "dependencies": {
     "clsx": "^2.1.1",
